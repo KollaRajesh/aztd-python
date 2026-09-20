@@ -106,6 +106,87 @@ pip install package_name
 uv pip install package_name
 ```
 
+## Setup This Repository
+
+Follow these steps to set up aztd-python locally.
+
+### 1. Clone Repository
+```bash
+git clone https://github.com/KollaRajesh/aztd-python.git
+cd aztd-python
+```
+
+### 2. Create Virtual Environment
+
+**Option A: Using Python (traditional)**
+```bash
+# Windows
+python -m venv .venv
+.venv\Scripts\activate
+
+# macOS/Linux
+python3 -m venv .venv
+source .venv/bin/activate
+```
+
+**Option B: Using UV (faster)**
+```bash
+uv venv
+# Activate automatically or use:
+# Windows: .venv\Scripts\activate
+# macOS/Linux: source .venv/bin/activate
+```
+
+### 3. Install Dependencies
+```bash
+# After activating venv
+pip install -r requirements.txt
+
+# Or with uv
+uv pip install -r requirements.txt
+```
+
+### 4. Launch Jupyter Notebooks
+```bash
+jupyter lab
+
+# Or with uv (no activation needed)
+uv run jupyter lab
+```
+
+Then navigate to `docs/` directory to explore notebooks.
+
+### 5. (Optional) Setup Code Review Graph
+
+For code analysis and architecture visualization:
+
+```bash
+pip install code-review-graph
+
+# Generate analysis
+crg build
+
+# View architecture
+crg view
+```
+
+This creates `.code-review-graph/` directory (auto-generated, not committed to git).
+
+### Configuration Files
+
+**What's committed:**
+- `requirements.txt` - All dependencies
+- `README.md` - This guide
+- `CONTRIBUTING.md` - Authoring standards
+- `docs/` - 25 notebooks and markdown guides
+
+**What's NOT committed (auto-generated locally):**
+- `.venv/` - Your isolated Python environment
+- `.code-review-graph/` - Code analysis database
+- `__pycache__/` - Python bytecode
+
+See `.gitignore` for complete list.
+
 ### Jupyter Environment Setup and Verification
 
 <details>
