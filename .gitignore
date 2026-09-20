@@ -29,7 +29,7 @@ npm-debug.log*
 .env
 .env.local
 
-# Copilot instructions (local only, not committed)
-.github/
+# Copilot local instructions (not committed)
+.github/instructions/
 # Added by code-review-graph
 .code-review-graph/
